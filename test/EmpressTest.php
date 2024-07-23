@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Empress\Test;
 
-use Amp\PHPUnit\AsyncTestCase;
 use Empress\Application;
 use Empress\ConfigurationBuilder;
 use Empress\Empress;
 use Empress\Exception\StartupException;
+use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 
-final class EmpressTest extends AsyncTestCase
+final class EmpressTest extends TestCase
 {
     public function testBootNoRoutes(): \Generator
     {

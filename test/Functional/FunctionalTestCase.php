@@ -10,15 +10,16 @@ use Amp\Http\Client\Cookie\InMemoryCookieJar;
 use Amp\Http\Client\HttpClient;
 use Amp\Http\Client\HttpClientBuilder;
 use Amp\Http\Client\Request;
-use Amp\PHPUnit\AsyncTestCase;
+
 use Amp\Promise;
 use Empress\Application;
 use Empress\ConfigurationBuilder;
 use Empress\Empress;
 use GuzzleHttp\Psr7\Uri;
+use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 
-abstract class FunctionalTestCase extends AsyncTestCase
+abstract class FunctionalTestCase extends TestCase
 {
     private CookieJar $cookieJar;
 

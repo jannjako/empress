@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Empress\Test;
 
-use Amp\PHPUnit\AsyncTestCase;
+
 use Empress\Application;
 use Empress\ConfigurationBuilder;
 use Empress\Test\Helper\StubServerTrait;
+use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 
-final class ApplicationTest extends AsyncTestCase
+final class ApplicationTest extends TestCase
 {
     use StubServerTrait;
 

@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Empress\Test;
 
 use Amp\Http\Server\Response;
-use Amp\PHPUnit\AsyncTestCase;
-use Empress\DefaultErrorHandler;
 
-final class DefaultErrorHandlerTest extends AsyncTestCase
+use Empress\DefaultErrorHandler;
+use PHPUnit\Framework\TestCase;
+
+final class DefaultErrorHandlerTest extends TestCase
 {
     public function testHandleError(): \Generator
     {

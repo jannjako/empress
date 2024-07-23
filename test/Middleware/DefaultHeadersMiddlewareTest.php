@@ -6,12 +6,14 @@ namespace Empress\Test\Middleware;
 
 use Amp\Http\Server\RequestHandler\CallableRequestHandler;
 use Amp\Http\Server\Response;
-use Amp\PHPUnit\AsyncTestCase;
+
 use Empress\Middleware\DefaultHeadersMiddleware;
 use Empress\Test\Helper\StubRequestTrait;
 use Generator;
+use PHPUnit\Framework\Test;
+use PHPUnit\Framework\TestCase;
 
-final class DefaultHeadersMiddlewareTest extends AsyncTestCase
+final class DefaultHeadersMiddlewareTest extends TestCase
 {
     use StubRequestTrait;
 
