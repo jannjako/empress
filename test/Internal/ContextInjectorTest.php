@@ -5,15 +5,16 @@ declare(strict_types=1);
 namespace Empress\Test\Internal;
 
 use Amp\Http\Status;
-use Amp\PHPUnit\AsyncTestCase;
+
 use Empress\Context;
 use Empress\Internal\ContextInjector;
 use Empress\Test\Helper\StubRequestTrait;
 use Empress\Validation\Registry\ValidatorRegistryInterface;
 use Exception;
 use Generator;
+use PHPUnit\Framework\TestCase;
 
-final class ContextInjectorTest extends AsyncTestCase
+final class ContextInjectorTest extends TestCase
 {
     use StubRequestTrait;
 

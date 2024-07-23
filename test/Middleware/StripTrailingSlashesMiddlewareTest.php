@@ -7,13 +7,14 @@ namespace Empress\Test\Middleware;
 use Amp\Http\Server\RequestHandler;
 use Amp\Http\Server\Response;
 use Amp\Http\Status;
-use Amp\PHPUnit\AsyncTestCase;
+
 use Empress\Middleware\StripTrailingSlashMiddleware;
 use Empress\Test\Helper\MockRequestHandlerTrait;
 use Empress\Test\Helper\StubRequestTrait;
 use Generator;
+use PHPUnit\Framework\TestCase;
 
-final class StripTrailingSlashesMiddlewareTest extends AsyncTestCase
+final class StripTrailingSlashesMiddlewareTest extends TestCase
 {
     use MockRequestHandlerTrait;
     use StubRequestTrait;

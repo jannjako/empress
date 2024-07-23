@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Empress\Test\Routing\Mapping\Exception;
 
-use Amp\PHPUnit\AsyncTestCase;
+
 use Empress\Context;
 use Empress\Internal\ContextInjector;
 use Empress\Routing\Mapping\ContentTypeMatcher;
@@ -15,8 +15,9 @@ use Empress\Validation\Registry\ValidatorRegistryInterface;
 use Error;
 use Exception;
 use Generator;
+use PHPUnit\Framework\TestCase;
 
-final class ExceptionMapperTest extends AsyncTestCase
+final class ExceptionMapperTest extends TestCase
 {
     use StubRequestTrait;
 
