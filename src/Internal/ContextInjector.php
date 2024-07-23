@@ -6,10 +6,10 @@ namespace Empress\Internal;
 
 use Amp\Http\Server\Request;
 use Amp\Http\Server\Response;
-use Amp\Promise;
 use Empress\ContextInterface;
 use Throwable;
-use function Amp\call;
+use function Amp\async;
+
 
 /**
  * Class ContextInjector.
@@ -29,12 +29,10 @@ final class ContextInjector
 
     /**
      * Injects the context object into the handler.
-     *
-     * @return Promise<void>
      */
-    public function inject(callable $handler): Promise
+    public function inject(callable $handler): void
     {
-        return call($handler, $this->context, $this->exception);
+        async($handler, $this->context, $this->exception);
     }
 
     public function getRequest(): Request
