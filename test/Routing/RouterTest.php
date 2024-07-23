@@ -7,7 +7,7 @@ namespace Empress\Test\Routing;
 use Amp\Http\Server\Response;
 use Amp\Http\Server\StaticContent\DocumentRoot;
 use Amp\Http\Status;
-use Amp\PHPUnit\AsyncTestCase;
+
 use Empress\Context;
 use Empress\Routing\Handler\HandlerCollection;
 use Empress\Routing\Handler\HandlerCollectionInterface;
@@ -25,8 +25,9 @@ use Empress\Test\Helper\StubServerTrait;
 use Empress\Validation\Registry\ValidatorRegistryInterface;
 use Error;
 use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
 
-final class RouterTest extends AsyncTestCase
+final class RouterTest extends TestCase
 {
     use StubRequestTrait;
     use StubServerTrait;

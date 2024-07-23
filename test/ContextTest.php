@@ -10,7 +10,7 @@ use Amp\Http\Cookie\ResponseCookie;
 use Amp\Http\Server\Response;
 use Amp\Http\Server\Session\Session;
 use Amp\Http\Status;
-use Amp\PHPUnit\AsyncTestCase;
+
 use Amp\Success;
 use Empress\Context;
 use Empress\Routing\HaltException;
@@ -22,9 +22,10 @@ use Empress\Validation\ValidationContext;
 use Generator;
 use JsonException;
 use LogicException;
+use Monolog\Test\TestCase;
 use const INF;
 
-final class ContextTest extends AsyncTestCase
+final class ContextTest extends TestCase
 {
     use StubRequestTrait;
 
